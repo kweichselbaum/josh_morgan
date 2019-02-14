@@ -1,6 +1,96 @@
-$primary-color: #444;
+@import "config";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 350;
+
+  &.lg-heading {
+    font-size: 4rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 3), 0.5);
+  }
+}
+
+#linkedin-icon {
+  @include easeIn();
+  color: #0077b5;
+  &:hover {
+    color: rgb(21, 77, 122);
+    transition: all 0.1s ease-out;
+  }
+}
+#facebook-icon {
+  @include easeIn();
+  color: #3b5998;
+  &:hover {
+    color: rgb(40, 73, 133);
+    transition: all 0.1s ease-out;
+  }
+}
+#github-icon {
+  @include easeIn();
+  color: #6cc644;
+  &:hover {
+    color: #357c0c;
+    transition: all 0.1s ease-out;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  @include easeIn();
+  &:hover {
+    color: $secondary-color;
+    @include easeOut();
+  }
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.8rem;
+    }
+  }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }
