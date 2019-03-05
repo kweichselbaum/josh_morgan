@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  background: #12bac7;
+  color: white;
+  text-align: center;
+  font-size: 1vw;
+  background-image: url("img/josh-background.png");
+}
+
+h1 {
+  font-size: 3vw;
+  color: orangered;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.container {
+  margin: 0px 3em 0px 3em;
+}
+
+.sound {
+  font-size: 0.7em;
+  text-align: center;
+  border: 5px solid #042180;
+  border-radius: 20px;
+  background: orangered;
+  margin: 2px;
+  display: inline-block;
+  width: 15%;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.sound:active {
+  transform: translateY(3px);
+}
+
+.sound:hover {
+  background: rgb(141, 34, 7);
+}
+img {
+  width: 20%;
+  height: auto;
+}
+
+#stopButton img {
+  transform: scaleX(4);
+}
+
+.stopButton:hover {
+  background: rgba(5, 1, 1, 0);
+}
+
+footer {
+  font-size: 20px;
+  padding-top: 2.5em;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
